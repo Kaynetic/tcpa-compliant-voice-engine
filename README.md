@@ -18,7 +18,7 @@ Calling a lead on behalf of a law firm is the highest-stakes automation in the p
 
 The first build used a conversational voice-AI vendor. Testing surfaced a disqualifying platform behavior: **the agent starts speaking on SIP `200 OK`, not on true human pickup** — so it talked over ringback and voicemail greetings. Worse, an LLM interpreting open speech meant a polite "bye bye" could be *understood* as an opt-out, and a hallucinated response could misstate a legal matter.
 
-The conclusion I reached (and documented for the client): a lead-chase call doesn't need conversation — it needs a **reliable, provable menu**. So the voice touch was rebuilt on raw Twilio Programmable Voice:
+The conclusion we reached (and documented for the client): a lead-chase call doesn't need conversation — it needs a **reliable, provable menu**. So the voice touch was rebuilt on raw Twilio Programmable Voice:
 
 - **Answering-machine detection (AMD)** — `MachineDetection=Enable`; the webhook branches on `AnsweredBy`, so the menu plays only after a human answers, and voicemail gets a purpose-built message instead.
 - **DTMF-only `<Gather>` IVR** — the system responds to keypad digits exclusively (connect me / send me the link / stop calling). Speech is never interpreted, so an opt-out is always an explicit, logged keypress. Deterministic by construction: no LLM in the call path at all.
@@ -82,3 +82,7 @@ The result: for any call, the firm can produce the recording, the verbatim trans
 | File | Pattern it demonstrates |
 |---|---|
 | [`excerpts/ivr_handlers.py`](excerpts/ivr_handlers.py) | AMD branch + DTMF-only `<Gather>` TwiML + instant opt-out handling |
+
+---
+
+*Built by [Kamogelo Mahlasela](https://github.com/Kaynetic) and [Masego Letsoko](https://github.com/SegoML).*
