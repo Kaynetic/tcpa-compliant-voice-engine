@@ -2,7 +2,7 @@
 
 The voice channel of a production lead-chase system for a U.S. personal-injury law firm: automated outbound calls that re-engage leads the intake team couldn't reach — built to be **deterministic, consent-gated, and legally auditable** end to end.
 
-> **About this repo.** Case study of a live client system; identifying details anonymized, code in [`excerpts/`](excerpts/) sanitized and representative. Production source is private.
+> **About this repo.** Case study of a live client system; identifying details anonymized, code in [`excerpts/`](excerpts/) sanitized and representative. Production source is private. All rights reserved — see the [copyright notice](#copyright--permitted-use) below.
 
 ---
 
@@ -86,3 +86,9 @@ The result: for any call, the firm can produce the recording, the verbatim trans
 ---
 
 *Built by [Kamogelo Mahlasela](https://github.com/Kaynetic) and [Masego Letsoko](https://github.com/SegoML).*
+
+## Copyright & permitted use
+
+© 2026 Kamogelo Mahlasela and Masego Letsoko. **All rights reserved.**
+
+This repository is published for **viewing only**, so prospective employers, clients, and collaborators can evaluate our work. **No license is granted.** Beyond viewing on GitHub (and the limited on-platform rights GitHub's Terms of Service provide), no part of this repository — text, architecture diagrams, or code excerpts — may be copied, reproduced, modified, distributed, or used to create derivative works without our prior written permission.
